@@ -1,0 +1,76 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.00976595149441727 -0.9995205148304508 -0.029383101001751382 5.640848867237138
+  position -2.6618888172357504 0.15541949884535117 2.3790694943236033
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.5 1.5
+  wallHeight 0.15
+}
+Solid {
+  translation 0.35 0 0.07
+  children [
+    Pose {
+      translation -0.002 0 -0.005
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "../../../frog.png"
+              ]
+            }
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.022 0.15 0.1
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.22 0.14
+      }
+    }
+  ]
+  name "red_frame_board"
+  boundingObject Box {
+    size 0.02 0.22 0.14
+  }
+}
+E-puck {
+  hidden position_0_0 7543.080965789281
+  hidden position_0_1 7731.598950385576
+  hidden linearVelocity_0 -5.7755764299788004e-08 1.215254155531124e-08 4.2561509872030005e-13
+  hidden angularVelocity_0 -8.101699229100732e-07 -3.850387629390478e-06 9.996335403549373e-15
+  hidden rotation_1 0 1 0 2.078338724432782
+  hidden linearVelocity_1 -7.71889238679402e-08 1.533903138000391e-08 5.329430524829208e-16
+  hidden angularVelocity_1 -8.101872438305653e-07 -3.850383967656222e-06 -1.8491419952002397e-13
+  hidden rotation_2 0 1 0 3.83844687381389
+  hidden linearVelocity_2 -7.682523525441964e-08 1.7067488746606127e-08 -8.437868636783365e-16
+  hidden angularVelocity_2 -8.101529229787307e-07 -3.850391166399325e-06 2.0163438493695013e-13
+  translation -0.03404190273911509 0.09502948697715195 -6.39619959588774e-05
+  rotation -9.305842240874128e-07 -9.013600548648683e-06 0.9999999999589444 -0.2073872783735835
+  controller "e-puck_search"
+  camera_width 128
+  camera_height 128
+}
